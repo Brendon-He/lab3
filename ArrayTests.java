@@ -26,4 +26,14 @@ public class ArrayTests {
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 7,6,5,3 }, input1);
 	}
+
+  @Test
+  public void testAverageWithoutLowest(){
+    double emptyArr[]={};
+    assertEquals(0.0,ArrayExamples.averageWithoutLowest(emptyArr),0.00005);
+    double oneLowest[]={3.0,4.0,5.0,6.0,7.0};
+    assertEquals(5.5,ArrayExamples.averageWithoutLowest(oneLowest),0.00005);
+    double multipleLowest[]={3.0,3.0,4.0,5.0,6.0,7.0};
+    assertEquals(5.0,ArrayExamples.averageWithoutLowest(multipleLowest),0.00005);
+  }
 }
