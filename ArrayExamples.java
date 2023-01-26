@@ -8,7 +8,9 @@ public class ArrayExamples {
     for(int i = 0; i < arr.length; i += 1) {
       tempArr[i] = arr[arr.length - i - 1];
     }
-    arr=tempArr;
+    for(int j=0;j<arr.length;j++){
+      arr[j]=tempArr[j];
+    }
   }
 
   // Returns a *new* array with all the elements of the input array in reversed
